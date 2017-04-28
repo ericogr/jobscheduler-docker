@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="eng">
+  <com.izforge.izpack.panels.UserInputPanel id="home">
+    <userInput/>
+  </com.izforge.izpack.panels.UserInputPanel>
+  <com.izforge.izpack.panels.HTMLLicencePanel id="gpl_licence"/>
+  <com.izforge.izpack.panels.TargetPanel id="target">
+    <installpath>/opt/joc</installpath>
+  </com.izforge.izpack.panels.TargetPanel>
+  <com.izforge.izpack.panels.UserInputPanel id="jetty">
+    <userInput>
+      <entry key="withJettyInstall" value="yes"/>
+      <entry key="jettyPort" value="4446"/>
+      <entry key="withJocInstallAsDaemon" value="yes"/>
+      <entry key="jettyBaseDir" value="/opt/joc"/>
+      <entry key="jettyOptionXms" value="128"/>
+      <entry key="jettyOptionXmx" value="512"/>
+      <entry key="jettyOptionXss" value="4000"/>
+      <entry key="jettyOptions" value=""/>
+    </userInput>
+  </com.izforge.izpack.panels.UserInputPanel>
+  <com.izforge.izpack.panels.UserInputPanel id="reportingDatabase">
+    <userInput>
+      <entry key="reporting.databaseDbms" value="mysql"/>
+    </userInput>
+  </com.izforge.izpack.panels.UserInputPanel>
+  <com.izforge.izpack.panels.UserInputPanel id="reportingDbconnection">
+    <userInput>
+      <entry key="reporting.databaseHost" value="{{DB_SERVER_HOST}}"/>
+      <entry key="reporting.databasePort" value="{{DB_SERVER_PORT}}"/>
+      <entry key="reporting.databaseSchema" value="{{DB_SERVER_DATABASE}}"/>
+      <entry key="reporting.databaseUser" value="{{DB_SERVER_USER}}"/>
+      <entry key="reporting.databasePassword" value="{{DB_SERVER_PASSWORD}}"/>
+    </userInput>
+  </com.izforge.izpack.panels.UserInputPanel>
+  <com.izforge.izpack.panels.UserInputPanel id="database">
+    <userInput>
+      <entry key="sameDbConnection" value="yes"/>
+      <entry key="databaseDbms" value=""/>
+    </userInput>
+  </com.izforge.izpack.panels.UserInputPanel>
+  <com.izforge.izpack.panels.UserInputPanel id="dbconnection">
+    <userInput>
+      <entry key="databaseHost" value="{{DB_SERVER_HOST}}"/>
+      <entry key="databasePort" value="{{DB_SERVER_PORT}}"/>
+      <entry key="databaseSchema" value="{{DB_SERVER_DATABASE}}"/>
+      <entry key="databaseUser" value="{{DB_SERVER_USER}}"/>
+      <entry key="databasePassword" value="{{DB_SERVER_PASSWORD}}"/>
+      <entry key="connectorJTDS" value="yes"/>
+      <entry key="connectorMaria" value="yes"/>
+    </userInput>
+  </com.izforge.izpack.panels.UserInputPanel>
+  <com.izforge.izpack.panels.UserInputPanel id="jdbc">
+    <userInput>
+      <entry key="connector" value=""/>
+      <entry key="connectorLicense" value=""/>
+    </userInput>
+  </com.izforge.izpack.panels.UserInputPanel>
+  <com.izforge.izpack.panels.UserInputPanel id="end">
+    <userInput/>
+  </com.izforge.izpack.panels.UserInputPanel>
+  <com.izforge.izpack.panels.InstallPanel id="install"/>
+  <com.izforge.izpack.panels.ProcessPanel id="process"/>
+  <com.izforge.izpack.panels.FinishPanel id="finish"/>
+</AutomatedInstallation>
