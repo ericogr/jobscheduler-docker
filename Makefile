@@ -1,5 +1,3 @@
-# Testing giantswarm as environment for sos-berlin jobscheduler
-
 # Building your custom docker image
 docker-build:
 	docker build -t ericogr/jobscheduler-master master
